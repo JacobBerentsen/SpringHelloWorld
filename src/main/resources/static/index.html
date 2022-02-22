@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Første webprogram</h1>
+Skriv inn navnet: <input type="text" id="navn"/>
+<button id="hentData" onclick="hentData()">Trykk her</button>
+<div id="hallo"></div>
+<script type="text/javascript">
+    function hentData() {
+        const url = "http://localhost:8080/?navn=" + $("#navn").val();
+        $.get(url, function (data) {
+            $("#hallo").html(data);
+        });
+    }
+
+</script>
+</body>
+</html>
