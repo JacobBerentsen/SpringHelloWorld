@@ -12,7 +12,8 @@ Skriv inn navnet: <input type="text" id="navn"/>
 <div id="hallo"></div>
 <script type="text/javascript">
     function hentData() {
-        const url = "http://localhost:8080/?navn=" + $("#navn").val();
+        //const url = "http://localhost:8080/?navn=" + $("#navn").val();
+        const url = "/?navn=" + $("#navn").val();
         $.get(url, function (data) {
             $("#hallo").html(data);
         });
